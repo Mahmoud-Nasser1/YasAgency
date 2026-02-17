@@ -1,9 +1,16 @@
 import React from "react";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Works from "./pages/ourWork/Works";
 
 const App = () => {
-  return <div>
-    <h1 className="flex text-cyan-600 ">Welcome to Yas Agency</h1>
-  </div>;
+  return (
+    <div className="flex flex-col ">
+      <Header />
+      <Works />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
