@@ -57,10 +57,8 @@ export default function Footer() {
             <a
               href="https://material-tailwind.com/"
               className="hover:text-white"
-            >
-              Material Tailwind
-            </a>
-            . All Rights Reserved.
+            ></a>
+            Yas Agency — All Rights Reserved
           </Typography>
 
           <div className="flex gap-4 text-gray-400">
