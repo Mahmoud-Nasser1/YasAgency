@@ -77,7 +77,7 @@ export default function Header() {
   // );
 
   return (
-    <div className="sticky border-0 top-0 z-10 h-max max-w-full bg-black text-white  rounded-none  ">
+    <div className="fixed border-0 top-0 left-0 right-0 z-10 h-max max-w-full bg-black text-white rounded-none w-full">
       <div className="container mx-auto flex items-center justify-between ">
         <Typography as="a" href="#" className="cursor-pointer  font-medium">
           <img src="/IMG2.png" className="h-24 w-44" />
