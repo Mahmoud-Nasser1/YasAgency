@@ -10,99 +10,90 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
+
       colors: {
-        gradient: {
-          sky: "#38bdf8",
-          violet: "#8b5cf6",
-          peach: "#fb923c",
-        },
+        /* Base */
+        background: "#000000",
+        foreground: "#ffffff",
 
-        light: {
-          background: "#ffffff",
-          foreground: "#1a1a2e",
-          
-          card: "#ffffff",
-          "card-foreground": "#1a1a2e",
-          popover: "#ffffff",
-          "popover-foreground": "#1a1a2e",
-          primary: "#1a1a2e",
-          "primary-foreground": "#ffffff",
-          secondary: "#f3f4f6",
-          "secondary-foreground": "#1a1a2e",
-          muted: "#f3f4f6",
-          "muted-foreground": "#6b7280",
-          accent: "#e5e7eb",
-          "accent-foreground": "#1a1a2e",
-          destructive: "#ef4444",
-          "destructive-foreground": "#ffffff",
-          border: "rgba(0, 0, 0, 0.1)",
-          input: "transparent",
-          "input-background": "#f9fafb",
-          "switch-background": "#d1d5db",
-          ring: "#8b5cf6",
-          chart: {
-            1: "#38bdf8",
-            2: "#8b5cf6",
-            3: "#fb923c",
-            4: "#10b981",
-            5: "#f59e0b",
-          },
-          sidebar: {
-            DEFAULT: "#fafafa",
-            foreground: "#1a1a2e",
-            primary: "#1a1a2e",
-            "primary-foreground": "#ffffff",
-            accent: "#f3f4f6",
-            "accent-foreground": "#1a1a2e",
-            border: "#e5e7eb",
-            ring: "#8b5cf6",
-          },
-        },
+        /* Cards & surfaces */
+        card: "#121212",
+        cardForeground: "#ffffff",
 
-        // 🌙 Dark Theme
-        dark: {
-          background: "#0f172a",
-          foreground: "#f1f5f9",
-          secondery: "#1a1a1a",
-          card: "#1e293b",
-          "card-foreground": "#f1f5f9",
-          popover: "#1e293b",
-          "popover-foreground": "#f1f5f9",
-          primary: "#f1f5f9",
-          "primary-foreground": "#0f172a",
-          secondary: "#334155",
-          "secondary-foreground": "#f1f5f9",
-          muted: "#334155",
-          "muted-foreground": "#94a3b8",
-          accent: "#475569",
-          "accent-foreground": "#f1f5f9",
-          destructive: "#ef4444",
-          "destructive-foreground": "#f1f5f9",
-          border: "rgba(148, 163, 184, 0.2)",
-          input: "transparent",
-          "input-background": "#1e293b",
-          "switch-background": "#475569",
-          ring: "#a78bfa",
-          chart: {
-            1: "#0ea5e9",
-            2: "#a78bfa",
-            3: "#fb923c",
-            4: "#10b981",
-            5: "#fbbf24",
-          },
-          sidebar: {
-            DEFAULT: "#1e293b",
-            foreground: "#f1f5f9",
-            primary: "#a78bfa",
-            "primary-foreground": "#f1f5f9",
-            accent: "#334155",
-            "accent-foreground": "#f1f5f9",
-            border: "#334155",
-            ring: "#a78bfa",
-          },
+        popover: "#121212",
+        popoverForeground: "#ffffff",
+
+        /* Primary */
+        primary: "#ffffff",
+        primaryForeground: "#000000",
+
+        /* Secondary */
+        secondary: "#1a1a1a",
+        secondaryForeground: "#f5f5f5",
+
+        /* Muted */
+        muted: "#262626",
+        mutedForeground: "#a3a3a3",
+
+        /* Accent */
+        accent: "#262626",
+        accentForeground: "#f5f5f5",
+
+        /* Destructive */
+        destructive: "#ef4444",
+        destructiveForeground: "#ffffff",
+
+        /* Borders & inputs */
+        border: "#2e2e2e",
+        input: "#2e2e2e",
+        ring: "#ffffff",
+
+        /* Sidebar */
+        sidebar: "#0d0d0d",
+        sidebarForeground: "#f5f5f5",
+        sidebarPrimary: "#ffffff",
+        sidebarPrimaryForeground: "#000000",
+        sidebarAccent: "#262626",
+        sidebarAccentForeground: "#f5f5f5",
+        sidebarBorder: "#2e2e2e",
+        sidebarRing: "#ffffff",
+
+        /* Custom tokens */
+        surfaceElevated: "#1a1a1a",
+        textSubtle: "#808080",
+        divider: "#333333",
+      },
+
+      borderRadius: {
+        lg: "4px",
+        md: "2px",
+        sm: "1px",
+      },
+
+      keyframes: {
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-in": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+      },
+
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fade-in 0.8s ease-out forwards",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 });
