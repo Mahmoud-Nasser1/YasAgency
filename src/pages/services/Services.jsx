@@ -1,4 +1,4 @@
-import Intro from "./components/intro";
+import Intro from "./components/Intro";
 import OurServices from "./components/OurServices";
 
 const Services = () => {

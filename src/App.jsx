@@ -4,7 +4,7 @@ import Header from "./components/header/Header";
 import Home from "./pages/home/Home";
 import Works from "./pages/ourWork/Works";
 import NotFound from "./pages/notFound/NotFound";
-import Services from "./pages/Services/Services";
+import Services from './pages/services/Services';
 
 const App = () => {
   return (
