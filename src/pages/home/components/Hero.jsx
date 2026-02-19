@@ -12,7 +12,7 @@ const Hero = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       </div>
-      <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
+      <div className="relative z-9 text-center px-6 max-w-4xl mx-auto">
         <motion.h1
           initial="hidden"
           animate="visible"

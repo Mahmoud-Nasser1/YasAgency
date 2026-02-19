@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import {
   Navbar,
@@ -8,11 +7,12 @@ import {
   IconButton,
 } from "@material-tailwind/react";
 import { Home, User, Briefcase, Layers, Users, Mail } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
-  const [openNav, setOpenNav] = React.useState(false);
+  const [openNav, setOpenNav] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener(
       "resize",
       () => window.innerWidth >= 960 && setOpenNav(false),
@@ -78,7 +78,7 @@ export default function Header() {
 
   return (
     <div className="fixed border-0 top-0 left-0 right-0 z-10 h-max max-w-full bg-black text-white rounded-none w-full">
-      <div className="container mx-auto flex items-center justify-between ">
+      <div className="container mx-auto flex items-center justify-between px-6 ">
         <Typography as="a" href="#" className="cursor-pointer  font-medium">
           <img src="/IMG2.png" className="h-24 w-44" />
         </Typography>
@@ -123,7 +123,7 @@ export default function Header() {
         </IconButton>
       </div>
       <MobileNav open={openNav}>
-        <div className="container mx-auto py-4">{navList}</div>
+        <div className="container mx-auto py-4 px-8">{navList}</div>
       </MobileNav>
     </div>
   );
