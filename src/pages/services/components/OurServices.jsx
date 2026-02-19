@@ -149,7 +149,7 @@ const OurServices = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 }}
-                  className="text-muted-foreground leading-relaxed mb-6 max-w-2xl"
+                  className="text-[#a3a3a3] leading-relaxed mb-6 max-w-2xl"
                 >
                   {service.description}
                 </motion.p>
@@ -162,7 +162,7 @@ const OurServices = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.35 + i * 0.05 }}
                       className="text-xs uppercase tracking-[0.15em]
-                                 text-muted-foreground
+                                 text-[#a3a3a3]
                                  border border-border
                                  px-4 py-2
                                  transition-all duration-300
