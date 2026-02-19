@@ -1,18 +1,29 @@
 import React from "react";
 import { Typography } from "@material-tailwind/react";
-
+import { NavLink } from "react-router-dom";
 const LINKS = [
   {
-    title: "Product",
-    items: ["Overview", "Features", "Solutions", "Tutorials"],
-  },
-  {
     title: "Company",
-    items: ["About us", "Careers", "Press", "News"],
+    items: [
+      { name: "About", path: "/about" },
+      { name: "Our Work", path: "/work" },
+      { name: "Clients", path: "/clients" },
+    ],
   },
   {
-    title: "Resource",
-    items: ["Blog", "Newsletter", "Events", "Help center"],
+    title: "Services",
+    items: [
+      { name: "Branding", path: "/services" },
+      { name: "Marketing", path: "/services" },
+      { name: "Advertising", path: "/services" },
+    ],
+  },
+  {
+    title: "Contact",
+    items: [
+      { name: "Get in Touch", path: "/contact" },
+      { name: "Careers", path: "/contact" },
+    ],
   },
 ];
 
@@ -23,8 +34,8 @@ export default function Footer() {
     <footer className="relative w-full bg-black text-white">
       <div className="mx-auto w-full max-w-7xl px-8 py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Typography as="a" href="#" className="cursor-pointer  font-medium">
-            <img src="/IMG2.png" className="h-28 w-44" />
+          <Typography as={NavLink} to="/" className="cursor-pointer">
+            <img src="/IMG2.png" className="h-28 w-44" alt="Yas Agency" />
           </Typography>
           <div className="grid grid-cols-3 gap-6">
             {LINKS.map(({ title, items }) => (
@@ -35,15 +46,15 @@ export default function Footer() {
                 >
                   {title}
                 </Typography>
-                {items.map((link) => (
-                  <li key={link}>
-                    <Typography
-                      as="a"
-                      href="#"
-                      className="py-1.5 text-sm font-normal text-gray-400 hover:text-white transition-colors"
+
+                {items.map(({ name, path }) => (
+                  <li key={name}>
+                    <NavLink
+                      to={path}
+                      className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      {link}
-                    </Typography>
+                      {name}
+                    </NavLink>
                   </li>
                 ))}
               </ul>
