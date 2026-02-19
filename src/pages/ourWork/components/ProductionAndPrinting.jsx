@@ -1,11 +1,8 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { fadeUp } from "../../../components/animation/FadeUp ";
-import { ArrowRight } from "lucide-react";
-
-const Portfolio = () => {
+const ProductionAndPrinting = () => {
   return (
-    <section className="px-6 py-24 md:px-12 lg:px-24 xl:px-32 bg-secondary">
+    <section className="px-6 pb-24 md:px-12 lg:px-24 xl:px-32 bg-secondary">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial="hidden"
@@ -14,18 +11,16 @@ const Portfolio = () => {
           custom={0}
           variants={fadeUp}
         >
-          <p className="text-xs uppercase tracking-[0.3em] text-[#a3a3a3] mb-4 font-medium">
-            Portfolio
+          <p className="text-xs uppercase tracking-[0.3em] text-[#a3a3a3] font-medium mb-12">
+            Production & Printing
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-[1.1] text-foreground mb-12">
-            Selected Work
-          </h2>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-4 mb-12">
+        <div className="grid md:grid-cols-3 gap-5 mb-12">
           {[
-            { img: "/outDoor1.jpg", label: "Outdoor Advertising" },
-            { img: "/Event1.jpg", label: "Events & Activations" },
-            { img: "/Production1.jpg", label: "Production & Printing" },
+            { img: "/printing1.png", label: "Printing" },
+            { img: "/production.png", label: "Production" },
+            { img: "/printing2.png", label: "Printing" },
+            
           ].map((item, i) => (
             <motion.div
               key={item.label}
@@ -50,19 +45,9 @@ const Portfolio = () => {
             </motion.div>
           ))}
         </div>
-        <Link
-          to="/work"
-          className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground hover:text-muted-foreground transition-colors group"
-        >
-          View Full Portfolio{" "}
-          <ArrowRight
-            size={14}
-            className="group-hover:translate-x-1 transition-transform"
-          />
-        </Link>
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default ProductionAndPrinting;
