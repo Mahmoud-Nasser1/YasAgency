@@ -1,7 +1,7 @@
 import Events from "./components/Events";
 import Outdoors from "./components/Outdoors";
 import ProductionAndPrinting from "./components/ProductionAndPrinting";
-import Intro from "./../services/components/Intro";
+import Intro from "./components/Intro";
 
 const Works = () => {
   return (
