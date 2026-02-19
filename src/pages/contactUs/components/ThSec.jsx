@@ -38,7 +38,7 @@ const ThSec = () => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={fadeUp}
-          className="text-xs uppercase tracking-[0.3em] text-[#a3a3a3] mb-4 font-medium mb-3"
+          className="text-xs uppercase tracking-[0.3em] text-[#a3a3a3]  font-medium mb-3"
         >
           Our Offices
         </motion.p>

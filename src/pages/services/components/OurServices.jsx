@@ -101,7 +101,6 @@ const OurServices = () => {
   return (
     <section className="section-padding bg-secondary">
       <div className="max-w-6xl mx-auto">
-
         {services.map((service, index) => {
           const Icon = service.icon;
 
@@ -109,9 +108,8 @@ const OurServices = () => {
             <motion.div
               key={service.title}
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              custom={index * 0.15}
+              animate="visible"
+              custom={index}
               variants={fadeUp}
               className="group grid md:grid-cols-[1fr_2fr] gap-8 py-16
                          border-b border-border last:border-b-0
@@ -121,22 +119,17 @@ const OurServices = () => {
             >
               {/* Left Column */}
               <div className="flex items-start gap-4">
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.1 }}
-                >
-                  <Icon
-                    size={28}
-                    strokeWidth={1}
-                    className="text-foreground mt-1 shrink-0"
-                  />
-                </motion.div>
+                <Icon
+                  size={28}
+                  strokeWidth={1}
+                  className="text-foreground mt-1 shrink-0"
+                />
 
                 <motion.h3
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.2 }}
+                  initial="hidden"
+                  animate="visible"
+                  custom={index + 0.3}
+                  variants={fadeUp}
                   className="text-xl text-foreground font-medium"
                 >
                   {service.title}
@@ -146,9 +139,10 @@ const OurServices = () => {
               {/* Right Column */}
               <div>
                 <motion.p
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 }}
+                  initial="hidden"
+                  animate="visible"
+                  custom={index + 0.6}
+                  variants={fadeUp}
                   className="text-[#a3a3a3] leading-relaxed mb-6 max-w-2xl"
                 >
                   {service.description}
@@ -158,9 +152,10 @@ const OurServices = () => {
                   {service.features.map((feature, i) => (
                     <motion.span
                       key={feature}
-                      initial={{ opacity: 0, y: 8 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.35 + i * 0.05 }}
+                      initial="hidden"
+                      animate="visible"
+                      custom={index + 0.8 + i * 0.1}
+                      variants={fadeUp}
                       className="text-xs uppercase tracking-[0.15em]
                                  text-[#a3a3a3]
                                  border border-border
@@ -176,7 +171,6 @@ const OurServices = () => {
             </motion.div>
           );
         })}
-
       </div>
     </section>
   );

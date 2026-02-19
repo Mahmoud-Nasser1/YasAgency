@@ -4,24 +4,30 @@ import { fadeUp } from "../../../components/animation/FadeUp ";
 import { ArrowRight } from "lucide-react";
 
 const clientsData = [
-  //   { name: "RH", logo: "/rh.png" },
-  { name: "Sakan", logo: "/sakan.png" },
-  { name: "United Bank", logo: "/united-bank.png" },
-  { name: "Banque Misr", logo: "/banque-misr.png" },
-  { name: "National Bank of Egypt", logo: "/nbe.png" },
-  //   { name: "Tseppas", logo: "/tseppas.png" },
-  { name: "Enmaa", logo: "/enmaa.png" },
-  { name: "Ideal Standard", logo: "/ideal-standard.png" },
-  { name: "alBaraka", logo: "/albaraka.png" },
-  { name: "Tabarak", logo: "/tabarak.png" },
-  { name: "Healthy & Tasty", logo: "/healthy-tasty.png" },
-  { name: "El Mansour", logo: "/el-mansour.png" },
-  { name: "Hemocure", logo: "/hemocure.png" },
-  { name: "Metro", logo: "/metro.png" },
-  { name: "Mansour", logo: "/mansour.png" },
-  { name: "Al Moasher", logo: "/al-moasher.png" },
-  { name: "LinkedIn", logo: "/linkedin.png" },
-  { name: "Hootsuite", logo: "/hootsuite.png" },
+  { name: "RH", logo: "/client1.png" },
+  { name: "Sakan", logo: "/client2.png" },
+  { name: "United Bank", logo: "/client3.png" },
+  { name: "Banque Misr", logo: "/client4.png" },
+  { name: "National Bank of Egypt", logo: "/client5.png" },
+  { name: "Tseppas", logo: "/client6.png" },
+  { name: "Enmaa", logo: "/client7.png" },
+  { name: "Ideal Standard", logo: "/client8.png" },
+  { name: "alBaraka", logo: "/client9.png" },
+  { name: "Tabarak", logo: "/client10.png" },
+  { name: "Healthy & Tasty", logo: "/client11.png" },
+  { name: "El Mansour", logo: "/client12.png" },
+  { name: "Hemocure", logo: "/client13.png" },
+  { name: "Metro", logo: "/client14.png" },
+  { name: "Mansour", logo: "/client15.png" },
+  { name: "Al Moasher", logo: "/client16.png" },
+  { name: "LinkedIn", logo: "/client17.png" },
+  { name: "Hootsuite", logo: "/client18.png" },
+  { name: "El Mansour", logo: "/client19.png" },
+  { name: "Hemocure", logo: "/client20.png" },
+  { name: "Metro", logo: "/client21.png" },
+  { name: "Mansour", logo: "/client22.png" },
+  { name: "Al Moasher", logo: "/client23.png" },
+  { name: "LinkedIn", logo: "/client24.png" },
 ];
 
 const clients = clientsData.slice(0, 12);
@@ -58,7 +64,7 @@ const Clients = () => {
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="w-full h-full object-contain opacity-60 hover:opacity-100 transition-opacity duration-500 grayscale"
+                className="w-full h-full object-contain opacity-80 hover:opacity-100 transition-opacity duration-500 "
                 loading="lazy"
               />
             </motion.div>

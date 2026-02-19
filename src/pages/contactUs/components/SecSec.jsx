@@ -5,7 +5,7 @@ import { Mail, Phone, Globe } from "lucide-react";
 const SecSec = () => {
   return (
     <section className="border-t border-b border-border bg-secondary">
-      <div className="max-w-6xl mx-auto px-6 py-24 md:px-12 lg:px-24 xl:px-32 py-12">
+      <div className="max-w-6xl mx-auto px-6 py-24 md:px-12 lg:px-24 xl:px-32 ">
         <div className="grid md:grid-cols-3 gap-10">
           {[
             {
