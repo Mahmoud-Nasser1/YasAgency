@@ -6,7 +6,6 @@ const Intro = () => {
   return (
     <section className="h-[70vh] px-24 flex items-center bg-black overflow-hidden">
       <div className="max-w-4xl mx-8 text-white mt-12">
-
         {/* Tagline */}
         <motion.p
           initial="hidden"
@@ -16,7 +15,7 @@ const Intro = () => {
           variants={fadeUp}
           className="text-xs uppercase tracking-[0.3em] text-[#a3a3a3] font-medium mb-10"
         >
-          High Visibility, Higher Impact
+          What We Do
         </motion.p>
 
         {/* Title */}
@@ -28,7 +27,7 @@ const Intro = () => {
           variants={fadeUp}
           className="text-5xl md:text-6xl font-bold tracking-[0.15em]"
         >
-          Our Work
+          Our Services
         </motion.h1>
 
         {/* Underline */}
@@ -44,7 +43,6 @@ const Intro = () => {
                      to-white/20
                      rounded-full"
         />
-
       </div>
     </section>
   );
