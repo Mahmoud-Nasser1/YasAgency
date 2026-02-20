@@ -2,32 +2,35 @@ import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 
 const Last = () => {
+  
   const formRef = useRef();
+  
 
   const sendEmail = (e) => {
     e.preventDefault(); // يمنع الصفحة تعيد تحميل نفسها
 
-    emailjs.sendForm(
-      "service_f34xk87",   // حط هنا الـ Service ID من EmailJS
-      "template_gnklqph",  // حط هنا الـ Template ID
-      formRef.current,
-      "IN9PgARj8ldGq7U54"    // حط هنا الـ Public Key
-    ).then(
-      () => {
-        alert("Email sent successfully 🚀");
-        formRef.current.reset();
-      },
-      (error) => {
-        alert("Something went wrong ❌");
-        console.error(error);
-      }
-    );
+    emailjs
+      .sendForm(
+       import.meta.env.VITE_EMAILJS_SERVICE_ID,   // Service ID
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,  // Template ID
+      formRef.current,                            // form reference
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY    // Public Key
+      )
+      .then(
+        () => {
+          alert("Email sent successfully 🚀");
+          formRef.current.reset();
+        },
+        (error) => {
+          alert("Something went wrong ❌");
+          console.error(error);
+        },
+      );
   };
 
   return (
     <section className="border-t border-border bg-secondary">
       <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-24 xl:px-32 py-20 flex flex-col md:flex-row items-center justify-between gap-8">
-        
         <div>
           <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4 font-medium">
             Ready to Start?
@@ -37,7 +40,11 @@ const Last = () => {
           </h2>
         </div>
 
-        <form ref={formRef} onSubmit={sendEmail} className="flex flex-col gap-4">
+        <form
+          ref={formRef}
+          onSubmit={sendEmail}
+          className="flex flex-col gap-4"
+        >
           <input
             type="text"
             name="name"
@@ -70,7 +77,6 @@ const Last = () => {
             Send Us an Email
           </button>
         </form>
-
       </div>
     </section>
   );
