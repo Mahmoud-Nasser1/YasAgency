@@ -13,15 +13,16 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/70 to-background" />
       </div>
       <div className="relative z-9 text-center px-6 max-w-4xl mx-auto">
-        <motion.h1
+        <motion.img
           initial="hidden"
           animate="visible"
           custom={0}
           variants={fadeUp}
-          className="text-7xl md:text-9xl font-bold tracking-[0.2em] text-foreground mb-8"
-        >
-          YAS
-        </motion.h1>
+          className=" h-48 md:h-72 object-contain mx-auto"
+          src="/IMG2.png"
+          alt="image"
+          
+        />
         <motion.div
           initial="hidden"
           animate="visible"

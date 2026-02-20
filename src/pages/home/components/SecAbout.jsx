@@ -21,10 +21,9 @@ const SecAbout = () => {
           </h2>
           <p className="text-lg md:text-xl text-[#a3a3a3] font-light leading-relaxed max-w-3xl mb-10">
             From a social insight department to a full-service digital
-            engagement agency — 120+ team members across Cairo, Athens, and
-            Dubai.
+            engagement agency, we have evolved with the digital landscape, consistently delivering.
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
               { n: "120+", l: "Team Members" },
               { n: "3", l: "Countries" },
@@ -40,7 +39,7 @@ const SecAbout = () => {
                 </p>
               </div>
             ))}
-          </div>
+          </div> */}
           <Link
             to="/about"
             className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-foreground hover:text-muted-foreground transition-colors group"

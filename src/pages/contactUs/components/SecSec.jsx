@@ -11,19 +11,19 @@ const SecSec = () => {
             {
               icon: Mail,
               label: "Email",
-              value: "info@yasadvertising.com",
-              href: "mailto:info@yasadvertising.com",
+              value: "yasagency443@gmail.com",
+              href: "mailto:yasagency443@gmail.com",
             },
             {
               icon: Phone,
               label: "Phone",
-              value: "+20 2 1234 5678",
-              href: "tel:+20212345678",
+              value: "01149033337",
+              href: "tel:+201149033337",
             },
             {
               icon: Globe,
               label: "Headquarters",
-              value: "Cairo, Egypt",
+              value: "Giza, Egypt",
               href: null,
             },
           ].map(({ icon: Icon, label, value, href }) => (
