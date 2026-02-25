@@ -99,8 +99,8 @@ const services = [
 
 const OurServices = () => {
   return (
-    <section className="section-padding bg-secondary">
-      <div className="max-w-6xl mx-auto">
+    <section className="section-padding bg-secondary ">
+      <div className="max-w-6xl mx-auto px-4 ">
         {services.map((service, index) => {
           const Icon = service.icon;
 

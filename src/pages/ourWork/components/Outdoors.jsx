@@ -23,9 +23,9 @@ const Outdoors = () => {
             { img: "/work4.png", label: "Zayed Screen" },
             { img: "/work5.png", label: "Zayed Screen" },
             { img: "/work6.png", label: "Zayed Screen" },
-            { img: "/work7.png", label: "Desert Road" },
-            { img: "/work8.png", label: "Desert Road" },
-            { img: "/work9.png", label: "WAHAT ROAD" },
+            // { img: "/work7.png", label: "Desert Road" },
+            // { img: "/work8.png", label: "Desert Road" },
+            // { img: "/work9.png", label: "WAHAT ROAD" },
           ].map((item, i) => (
             <motion.div
               key={item.label}

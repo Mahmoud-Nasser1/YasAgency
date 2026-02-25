@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
 import {
   Navbar,
-  MobileNav,
+  Collapse,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { Home, User, Briefcase, Layers, Users, Mail } from "lucide-react";
@@ -36,9 +35,9 @@ export default function Header() {
             to={path}
             className={({ isActive }) =>
               `flex items-center gap-2 text-xs uppercase tracking-[0.2em]
-             transition-colors duration-300
-             hover:text-white
-             ${isActive ? "text-white" : "text-gray-400"}`
+               transition-colors duration-300
+               hover:text-white
+               ${isActive ? "text-white" : "text-gray-400"}`
             }
           >
             <Icon size={16} />
@@ -49,41 +48,17 @@ export default function Header() {
     </ul>
   );
 
-  //   const navList = (
-  //   <ul className="flex flex-col lg:flex-row gap-6">
-  //     {[
-  //       { name: "Home", path: "/" },
-  //       { name: "About", path: "/about" },
-  //       { name: "Services", path: "/services" },
-  //       { name: "Our Work", path: "/work" },
-  //       { name: "Clients", path: "/clients" },
-  //       { name: "Contact", path: "/contact" },
-  //     ].map((item) => (
-  //       <li key={item.path}>
-  //         <NavLink
-  //           to={item.path}
-  //           className={({ isActive }) =>
-  //             `text-xs uppercase tracking-[0.2em]
-  //              transition-colors duration-300
-  //              hover:text-white
-  //              ${isActive ? "text-white" : "text-gray-400"}`
-  //           }
-  //         >
-  //           {item.name}
-  //         </NavLink>
-  //       </li>
-  //     ))}
-  //   </ul>
-  // );
-
   return (
-    <div className="fixed border-0 top-0 left-0 right-0 z-10 h-max max-w-full bg-black text-white rounded-none w-full">
-      <div className="container mx-auto flex items-center justify-between px-6 ">
-        <Typography as="a" href="#" className="cursor-pointer  font-medium">
-          <img src="/IMG2.png" className="h-24 w-44" />
+    <div className="fixed top-0 left-0 right-0 z-10 w-full bg-black text-white px-8">
+      <div className="container mx-auto flex items-center justify-between  ">
+        <Typography as="a" href="#" className="cursor-pointer font-medium">
+          <img src="/IMG2.png" className="h-24 w-40 " />
         </Typography>
+
+        {/* Nav List Desktop */}
         <div className="hidden lg:block">{navList}</div>
 
+        {/* Hamburger Icon */}
         <IconButton
           variant="text"
           className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
@@ -122,9 +97,11 @@ export default function Header() {
           )}
         </IconButton>
       </div>
-      <MobileNav open={openNav}>
-        <div className="container mx-auto py-4 px-8">{navList}</div>
-      </MobileNav>
+
+      {/* Mobile Menu using Collapse */}
+      <Collapse open={openNav} className="lg:hidden bg-black">
+        <div className="container mx-auto py-4 px-8 ">{navList}</div>
+      </Collapse>
     </div>
   );
 }
