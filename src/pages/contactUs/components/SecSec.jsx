@@ -11,8 +11,8 @@ const SecSec = () => {
             {
               icon: Mail,
               label: "Email",
-              value: "yasagency443@gmail.com",
-              href: "mailto:yasagency443@gmail.com",
+              value: "info@yasagency.info",
+              href: "mailto:info@yasagency.info",
             },
             {
               icon: Phone,
